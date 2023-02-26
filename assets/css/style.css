@@ -1,0 +1,91 @@
+/* Reset */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+/* fonts */
+@font-face {
+  font-family: 'GilroyLight';
+  src: url(Gilroy-Light.otf);
+}
+@font-face {
+  font-family: 'GilroyBold';
+  src: url(Gilroy-ExtraBold.otf);
+}
+
+html,body,main{
+  background: #F8F2EF;
+}
+
+.container{
+  display: flex;
+  padding: 4rem 10%;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.container > h1{
+  font: 6rem "GilroyBold";
+  letter-spacing: 4px;
+  line-height: 8rem;
+}
+.container > input{
+  width: 50%;
+  text-align:center;
+  font-family: 'GilroyLight';
+  padding: 12px;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-boxes{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+}
+@media (max-width:855px) {
+  .pokemon-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width:425px) {
+  .pokemon-box{
+    width: 100%;
+  }
+}
+
+.pokemon-boxes > .pokemon-box{
+  font-family: 'GilroyBold', sans-serif;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F2EF;
+  border-radius: 14px;
+}
+
+.pokemon-box:hover{
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 20px 0px rgba(0,0,0,0.3);
+}
+.pokemon-boxes > .pokemon-box > img{
+  width: 100px;
+}
+
+.pokemon-box > .box-text > p{
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  color: rgba(0,0,0,0.8);
+}
